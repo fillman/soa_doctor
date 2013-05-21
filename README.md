@@ -12,14 +12,12 @@ If you install the gem it'll give the executable:
     $ healthcheck --help
 
 For example you have YAML file with your services listed:
-
-    ```ruby
-        services:
-          google: "http://google.com"
-          yahoo:  "http://yahoo.com"
-          yandex: "http://yandex.com"
-    ```
-
+    
+    services:
+      google: "http://google.com"
+      yahoo:  "http://yahoo.com"
+      yandex: "http://yandex.com"
+    
 So you do
     $ healthcheck -f you_yaml_file.yaml
 
