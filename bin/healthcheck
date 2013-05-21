@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require "escort"
+require "healthcheck"
+
+Escort::App.create do |app|
+  app.config_file ".healthcheck", :autocreate => true
+  app.version Healthcheck::VERSION
+
+  app.summary "Print services statuses and message"
+  app.description "Given a yaml file with a service name and url we can ping them and display results in a table"
+
+  app.options do |opts|
+    opts.opt :file, "YAML file destination", :short => '-f', :long => '--file', :type => :string
+    opts.validate(:file, "must exist") { |option| File.exists?(File.expand_path(option)) }
+  end
+
+  app.action do |options, arguments|
+    puts Healthcheck::Commands::StatusCheck.new(options, arguments).execute
+  end
+end

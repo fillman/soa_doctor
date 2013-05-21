@@ -1,0 +1,4 @@
+services:
+  google: "http://google.com"
+  yahoo:  "http://yahoo.com"
+  yandex: "http://yandex.com"
