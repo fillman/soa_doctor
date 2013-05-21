@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Healthcheck::Commands::StatusCheck do
+describe SoaDoctor::Commands::StatusCheck do
 
 
   let(:options)   { { :global => { :options => { :file => File.expand_path("../../../example/services.yml", __FILE__) } } } }
@@ -11,15 +11,15 @@ describe Healthcheck::Commands::StatusCheck do
   end
 
   it "should ping each service and display results" do
-    stub_request(:any, /.*/).to_return(:status => [200, "It's fuckin' OK there!"])
+    stub_request(:any, /.*/).to_return(:status => [200, "Doc I'm OK!"])
     described_class.new(options, arguments).execute.render.should == <<-EOF.deindent
-        +---------+--------+------------------------+
-        | Service | Status | Message                |
-        +---------+--------+------------------------+
-        | google  | 200    | It's fuckin' OK there! |
-        | yahoo   | 200    | It's fuckin' OK there! |
-        | yandex  | 200    | It's fuckin' OK there! |
-        +---------+--------+------------------------+
+        +---------+--------+-------------+
+        | Service | Status | Message     |
+        +---------+--------+-------------+
+        | google  | 200    | Doc I'm OK! |
+        | yahoo   | 200    | Doc I'm OK! |
+        | yandex  | 200    | Doc I'm OK! |
+        +---------+--------+-------------+
     EOF
   end
 

@@ -1,6 +1,6 @@
 require "net/http"
 
-module Healthcheck
+module SoaDoctor
   module Commands
     class StatusCheck < ::Escort::ActionCommand::Base
       def execute

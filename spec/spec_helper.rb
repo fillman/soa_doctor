@@ -1,5 +1,5 @@
 # Require application itself to test out
-require "healthcheck"
+require "soa_doctor"
 require "webmock/rspec"
 
 class String
