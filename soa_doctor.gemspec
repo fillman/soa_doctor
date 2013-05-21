@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Imagine you have a tons of services running somewhere on heroku or else where. And clap!
                           One got down, you try to find which and its a time consuming thing. This tool will register
                           your apps and ping them any time you like }
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/fillman/soa_doctor"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
