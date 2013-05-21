@@ -1,12 +1,13 @@
 # Healthcheck
 
-TODO: Write a gem description
+In software oriented architecture happens that you have a lot of services.
+They can crash sometimes on Heroku or else where you host them. This gem will help to quickly check their heart beat.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'healthcheck'
+    gem 'soa_doctor'
 
 And then execute:
 
@@ -14,11 +15,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install healthcheck
+    $ gem install soa_doctor
 
 ## Usage
 
-TODO: Write usage instructions here
+healthcheck --help
 
 ## Contributing
 
