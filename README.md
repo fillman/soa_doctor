@@ -1,6 +1,6 @@
 # Healthcheck
 
-In software oriented architecture happens that you have a lot of services.
+In service oriented architecture happens that you have a lot of services.
 They can crash sometimes on Heroku or else where you host them. This gem will help to quickly check their heart beat.
 
 ## Installation
