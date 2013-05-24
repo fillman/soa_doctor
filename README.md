@@ -19,7 +19,14 @@ For example you have YAML file with your services listed:
       yandex: "http://yandex.com"
     
 So you do
+    
     $ healthcheck -f you_yaml_file.yaml
+        
+You can always run
+
+    $ healthcheck --help
+    
+for more options or just to get a simple help.
 
 The output would be a table or services and their statuses.
 
